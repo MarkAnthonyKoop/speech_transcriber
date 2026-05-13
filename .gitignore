@@ -1,0 +1,83 @@
+# Python build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Editor cruft
+*.un~
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+.DS_Store
+
+# Local backups
+.snapshots/
+
+# Claude Code runtime state (per-project lock dirs, scheduler state)
+.claude/
+**/.claude/
+
+# === Credentials, tokens, secrets — NEVER commit ===
+*.pickle
+*.token
+token_*
+*_token.json
+*.key
+*.pem
+*.crt
+*.p12
+*.pfx
+.env
+.env.*
+client_secret*.json
+credentials.json
+.git-credentials
+api_key
+api_key.txt
+**/api_key
+
+# Caches and runtime state (typically outside the tree, listed for safety)
+.cache/
+
+# Local artifacts / debug captures
+**/output/
+**/debug_*.png
+**/screenshot_*.png
+tools/browser/
+
+# Rendered media artifacts — reproducible from source, no need in git.
+# (Doc-illustrative screenshots are excluded above already.)
+**/runs/**/*.mp4
+**/runs/**/*.mov
+**/runs/**/*.wav
+**/runs/**/*.flac
+**/runs/**/*.mp3
+**/runs/**/*.jpg
+**/runs/**/*.jpeg
+**/runs/**/*.png
+**/mp4/
+**/ai_covers/
+**/ai_covers_v2/
+**/composed_covers/
+
+# Personal documents that happen to live in the tree — exclude until reviewed
+# (Move these into a dedicated dir if you want to keep them in a private fork.)
+/cue_instrument_design.md
+/eviction_case_summary.md
+
+# Vim undo files at any depth
+**/.*.un~
+
+# Old harness installer (system-level, not part of the workspace)
+/install_claude
+/.install_claude.un~
+/.CLAUDE.md.un~
