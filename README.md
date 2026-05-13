@@ -1,6 +1,6 @@
 # speech_transcriber
 
-A small wrapper around [faster-whisper](https://github.com/SYSTRAN/faster-whisper) sized for the documentary workflow under `~/claude/theres_is_no_homeless/`. One file in, a structured `Transcript` (with word-level timestamps) plus SRT / VTT / TXT / JSON / Markdown out.
+A small wrapper around [faster-whisper](https://github.com/SYSTRAN/faster-whisper) sized for the documentary workflow under `~/claude/there_is_no_homeless/`. One file in, a structured `Transcript` (with word-level timestamps) plus SRT / VTT / TXT / JSON / Markdown out.
 
 Built on top of CTranslate2, so it transparently uses CUDA when available (this machine has CUDA 12.2 + an NVIDIA GPU) and falls back to int8 CPU otherwise. Model weights cache on `/mnt/d/` to keep the WSL VHD lean.
 
@@ -33,7 +33,7 @@ Output formats: `md` (default), `srt`, `vtt`, `txt`, `json`. The first run for e
 ### Transcribe a directory of recordings
 
 ```bash
-python3 -m speech_transcriber batch /mnt/d/theres_is_no_homeless/episodes/<id>/raw/audio/ \
+python3 -m speech_transcriber batch /mnt/d/there_is_no_homeless/episodes/<id>/raw/audio/ \
     --language en --format md
 # writes <stem>.md next to every audio/video file; --force overwrites existing
 ```
