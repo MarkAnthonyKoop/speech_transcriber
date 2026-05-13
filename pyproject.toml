@@ -1,17 +1,17 @@
-[build-system]
-requires = ["setuptools>=68"]
-build-backend = "setuptools.build_meta"
+        [build-system]
+        requires = ["setuptools>=68"]
+        build-backend = "setuptools.build_meta"
 
-[project]
-name = "speech_transcriber"
-version = "0.1.0"
-description = "faster-whisper wrapper: audio/video file → Transcript with word-level timestamps, SRT/VTT/TXT/JSON/MD writers."
-requires-python = ">=3.10"
-dependencies = [
+        [project]
+        name = "speech_transcriber"
+        version = "0.1.0"
+        description = "faster-whisper wrapper: audio/video -> Transcript with timestamps + SRT/VTT/MD."
+        requires-python = ">=3.10"
+        dependencies = [
     "faster-whisper",
 ]
 
-[tool.setuptools]
+        [tool.setuptools]
 packages = ["speech_transcriber"]
 
 [tool.setuptools.package-dir]
