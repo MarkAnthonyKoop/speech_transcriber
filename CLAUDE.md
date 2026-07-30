@@ -70,3 +70,9 @@ done
 ```
 
 If you actually changed `transcribe.py`, run a *real* speech sample (any audiobook clip, podcast, etc.) and confirm word timestamps look reasonable.
+
+## Note (2026-07-30, ~/claude/movie_studio session — claimed & FIXED)
+`models.py` CACHE_ROOT pointed at WSL-dead `/mnt/d/cache/huggingface`, so every
+`transcribe()` died with OSError before reaching whisper. Fixed to
+`~/.cache/huggingface` (where the distil-large-v3 weights already live).
+drum_shorts/autocaption.py now imports this package instead of hand-rolling.

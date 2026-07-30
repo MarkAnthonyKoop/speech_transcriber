@@ -11,7 +11,7 @@ from __future__ import annotations
 import os
 from pathlib import Path
 
-CACHE_ROOT = Path("/mnt/d/cache/huggingface")
+CACHE_ROOT = Path("~/.cache/huggingface").expanduser()
 DEFAULT_MODEL = "distil-large-v3"
 
 _ALIAS = {
